@@ -1,20 +1,25 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-
 function App() {
   const dictionary = [
     {
       word: "React",
       meaning: "A JavaScript library for building user interfaces.",
     },
-
-    { word: "Component", meaning: "A reusable building block in React." },
-
-    { word: "State", meaning: "An object that stores data for a component." },
+    {
+      word: "Component",
+      meaning: "A reusable building block in React.",
+    },
+    {
+      word: "State",
+      meaning: "An object that stores data for a component.",
+    },
   ];
+
   const [searchTerm, setSearchTerm] = useState("");
   const [meaning, setMeaning] = useState("");
+
   const handleSearch = () => {
     const term = searchTerm.trim().toLowerCase();
     const foundWord = dictionary.find(
@@ -39,7 +44,7 @@ function App() {
       <button onClick={handleSearch}>Search</button>
       {!!meaning && (
         <>
-          <div>Defintion:</div>
+          <div>Definition:</div>
           <div>{meaning}</div>
         </>
       )}
