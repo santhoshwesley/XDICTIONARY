@@ -42,12 +42,8 @@ function App() {
         placeholder="Enter search term"
       />
       <button onClick={handleSearch}>Search</button>
-      {!!meaning && (
-        <>
-          <div>Definition:</div>
-          <div>{meaning}</div>
-        </>
-      )}
+      <div>Definition:</div>
+      <div>{meaning}</div>
     </div>
   );
 }
